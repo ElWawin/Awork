@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Analysis Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="menu-btn" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="credits">
+            <h3>Créditos</h3>
+            <p>Creator:</p>
+            <a href="https://www.instagram.com/el_wawin_" target="_blank">@el_wawin_</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>AI Analysis Platform</h1>
+        
+        <div class="upload-section">
+            <div class="upload-box" id="dropZone">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <h3>Arrastra o selecciona un archivo</h3>
+                <p>Soporta imágenes, texto y PDF</p>
+                <input type="file" id="fileInput" accept=".txt,.pdf,image/*">
+            </div>
+        </div>
+
+        <div class="analysis-options">
+            <button onclick="analyzeContent('summary')">Resumir</button>
+            <button onclick="analyzeContent('qa')">Hacer preguntas</button>
+        </div>
+
+        <div class="result-section">
+            <h2>Resultados</h2>
+            <div id="results"></div>
+        </div>
+
+        <div class="history-section">
+            <h2>Historial</h2>
+            <div id="history"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
